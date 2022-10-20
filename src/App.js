@@ -4,6 +4,8 @@ import './App.css';
 import Container from '@mui/material/Container';
 import Header from './Header';
 import Card from './Card';
+import {Routes, Route} from 'react-router-dom';
+import Women from './Women'
 
 function App() {
 
@@ -22,7 +24,10 @@ function App() {
       <header className="App-header">
         <Container>
           <Header />
-          <Card data={data}/>
+          <Routes>
+            <Route path="/" element={<Card data={data} />} />
+            <Route path="/women" element={<Women data={data} />}/>
+          </Routes>
         </Container>
       </header>
     </div>
