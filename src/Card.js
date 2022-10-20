@@ -12,7 +12,7 @@ function Card({data}) {
   } else { 
     let result = data.filter(obj => obj.category === "men's clothing")
     return(
-        <Grid container spacing={ 2 }>
+        <Grid container spacing={ 2 } style={{paddingTop: '12rem'}}>
         {result.map((item) => (
           <Grid item xs={12} sm={6} md={4} key={item.id}>
             <Paper elevation={3} className="paper">
